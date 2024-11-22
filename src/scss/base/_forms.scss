@@ -1,0 +1,46 @@
+// BUTONS
+.btn {
+   position: relative;
+   display: inline-block;
+   font-size: 17px;
+   font-weight: 600;
+   color: var(--text-color);
+
+   &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transform: scale(0);
+      transition: all .3s ease 0s;
+   }
+
+   &_b {
+      padding: 9px 7px;
+      border: 2px solid var(--text-color);
+      border-radius: 8px;
+
+      &::after {
+         background-color: var(--text-color);
+         border-radius: 5px;
+      }
+   }
+
+   span {
+      position: relative;
+      z-index: 1;
+      transition: all .3s ease 0s;
+   }
+
+   &:hover {
+      &.btn_b {
+         color: var(--page-bg);
+      }
+
+      &:after {
+         transform: scale(1);
+      }
+   }
+}
